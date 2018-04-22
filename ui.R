@@ -14,7 +14,7 @@ shinyUI(fluidPage(
                   min = 0.01,
                   max = 0.1,
                   value = 0.05,
-                  step = 0.01),
+                  step = 0.005),
       checkboxInput("tail", "Lower tail", FALSE)
     ),
     mainPanel(
