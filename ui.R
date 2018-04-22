@@ -6,7 +6,7 @@ shinyUI(fluidPage(
       sliderInput("deg_f",
                   "degrees of freedom:",
                   min = 1,
-                  max = 20,
+                  max = 30,
                   value = 10,
                   step = 1),
       sliderInput("alpha",
