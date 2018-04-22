@@ -10,7 +10,7 @@ shinyServer(function(input, output) {
           main = paste("Chi-Square Distribution, df =", 
                        as.character(input$deg_f), 
                        "critical value = ", 
-                       "as.character(crit)"),
+                       as.character(crit)),
           xlab = "chi-square", ylab = "density") + 
       geom_vline(xintercept = crit, color = "red") +
       theme_minimal() 
