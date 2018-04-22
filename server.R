@@ -7,9 +7,9 @@ shinyServer(function(input, output) {
     crit <- qchisq(input$alpha, input$deg_f, lower.tail = input$tail)
     qplot(x, y, geom = "line", xlim = c(0, 40),
           ylim = c(0, 0.3), 
-          main = paste("Chi-Square Distribution, df =", 
+          main = paste0("Chi-Square Distribution, df =", 
                        as.character(input$deg_f), 
-                       "critical value = ", 
+                       ", critical value = ", 
                        as.character(crit)),
           xlab = "chi-square", ylab = "density") + 
       geom_vline(xintercept = crit, color = "red") +
