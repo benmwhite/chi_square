@@ -8,7 +8,9 @@ shinyServer(function(input, output) {
     qplot(x, y, geom = "line", xlim = c(0, 40),
           ylim = c(0, 0.3), 
           main = paste("Chi-Square Distribution, df =", 
-                       as.character(input$deg_f)),
+                       as.character(input$deg_f), 
+                       "critical value = ", 
+                       "as.character(crit)"),
           xlab = "chi-square", ylab = "density") + 
       geom_vline(xintercept = crit, color = "red") +
       theme_minimal() 
